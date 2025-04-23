@@ -1,0 +1,3 @@
+# requirements.txt (for frontend)
+streamlit
+requests
