@@ -13,27 +13,15 @@ st.set_page_config(
 
 logo_path = Path(__file__).parent / "Kly-Mate.png" 
 
-# if logo_path.exists():
-#     st.image(str(logo_path)) # Adjust width as needed
-# else:
-#     st.warning("Logo file not found. Please place it in the same directory as the script.")
+if logo_path.exists():
+    st.image(str(logo_path), width = 300) # Adjust width as needed
+else:
+    st.warning("Logo file not found. Please place it in the same directory as the script.")
 
 # --- App Title and Description ---
 st.title("Kly-mate Weather Dashboard")
 st.caption("Real-time weather, air quality index (AQI), and placeholder forecast.")
-st.markdown(
-    """
-    <style>
-    .center-image {
-        text-align: center;
-    }
-    </style>
-    <div class="center-image">
-        <img src="E:\KLY-MATE\Klymate_frontend\Kly-Mate.png" width="300"/>
-    </div>
-    """, 
-    unsafe_allow_html=True
-)
+st.markdown('---')
 
 # --- User Inputs ---
 st.subheader("📍 Location Input")
