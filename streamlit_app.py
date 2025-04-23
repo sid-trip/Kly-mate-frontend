@@ -2,22 +2,16 @@
 import streamlit as st
 import requests
 import json
-from pathlib import Path # To handle file paths for the logo
+from pathlib import Path 
 
-# --- Page Configuration (Set Title, Icon, Layout) ---
-# This should be the first Streamlit command in your script
 st.set_page_config(
     page_title="Kly-mate",
-    page_icon="☁️", # You can use an emoji or a path to a favicon file
-    layout="centered", # Use "wide" or "centered"
-    initial_sidebar_state="collapsed" # Start with sidebar collapsed
+    page_icon="☁️",
+    layout="centered", 
+    initial_sidebar_state="collapsed"
 )
 
-# --- Logo ---
-# Construct the path to the logo file relative to this script
-# Assumes the logo image is in the SAME directory as streamlit_app.py
-# !!! UPDATE 'your_logo_filename.jpg' to the actual filename !!!
-logo_path = Path(__file__).parent / "WhatsApp Image 2025-04-21 at 21.00.11_a09c7720.jpg" #<-- CHANGE FILENAME
+logo_path = Path(__file__).parent / "Kly-Mate.png" 
 
 if logo_path.exists():
     st.image(str(logo_path), width=150) # Adjust width as needed
@@ -39,9 +33,8 @@ with col_lat:
 with col_lon:
     lon = st.number_input("Enter Longitude:", value=77.5946, format="%.4f", help="Example: 77.5946 for Bengaluru")
 
-# --- Backend API URL (Needs to be Correct!) ---
-# !!! VERY IMPORTANT: Use your ACTUAL deployed backend URL !!!
-BACKEND_URL = "https://kly-mate.onrender.com" # <-- MAKE SURE THIS IS YOUR CORRECT RENDER URL!
+# --- Backend API URL ---
+BACKEND_URL = "https://kly-mate.onrender.com" 
 
 # --- Fetch Data Button ---
 if st.button("🔄 Fetch Data & Predict", type="primary", use_container_width=True):
