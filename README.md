@@ -39,7 +39,7 @@ Klymate_frontend/
 1.  **Clone the repository:**
     ```bash
     # Replace with your frontend repo URL
-    git clone https://github.com/YourUsername/kly-mate-frontend.git
+    git clone https://github.com/sid-trip/kly-mate-frontend.git
     cd Klymate_frontend
     ```
 
@@ -53,17 +53,6 @@ Klymate_frontend/
 3.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
-    ```
-
-## ⚙️ Configuration
-
-The URL for the deployed backend API is currently set within the `streamlit_app.py` script.
-
-* **File:** `streamlit_app.py`
-* **Variable:** `BACKEND_URL`
-    ```python
-    # Ensure this variable points to the live backend API
-    BACKEND_URL = "https://kly-mate.onrender.com"
     ```
 
 ## ▶️ Running Locally
